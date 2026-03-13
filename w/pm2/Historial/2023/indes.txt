@@ -1,0 +1,9 @@
+/*
+lotteryData base
+
+by carlosw-sky,     
+corp 2024
+database
+-------------------------
+
+*/

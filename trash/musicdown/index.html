@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube 下载器</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 50px; }
+    input, select, button { padding: 10px; margin: 10px; width: 300px; }
+  </style>
+</head>
+<body>
+
+  <h1>🎬 YouTube 视频下载器</h1>
+  <input type="text" id="ytUrl" placeholder="请输入 YouTube 链接">
+  <br>
+  <select id="format">
+    <option value="mp4">下载为 MP4</option>
+    <option value="mp3">下载为 MP3</option>
+  </select>
+  <br>
+  <button onclick="download()">下载</button>
+
+  <script>
+    function download() {
+      const url = document.getElementById('ytUrl').value;
+      const format = document.getElementById('format').value;
+      if (!url) {
+        alert("请输入链接");
+        return;
+      }
+
+      // 假设你后端部署在 /api
+      window.open(`https://your-backend-url.com/api/download?url=${encodeURIComponent(url)}&format=${format}`);
+    }
+  </script>
+
+</body>
+</html>

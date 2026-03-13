@@ -1,0 +1,95 @@
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* 头部 */
+header {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* 教程内容 */
+main {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* 课程模块 */
+.lesson {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 代码块 */
+pre {
+    background-color: #222;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+/* 选择题 */
+.quiz {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.quiz h2 {
+    font-size: 1.3rem;
+}
+
+.quiz label {
+    display: block;
+    font-size: 1rem;
+    margin: 8px 0;
+}
+
+.quiz button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.quiz button:hover {
+    background-color: #218838;
+}
+
+#result {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* 响应式适配 */
+@media (max-width: 768px) {
+    main {
+        width: 95%;
+    }
+
+    pre {
+        font-size: 14px;
+    }
+
+    .quiz button {
+        width: 100%;
+    }
+}

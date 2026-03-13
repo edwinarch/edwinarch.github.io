@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cashier 收银系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/cashier/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🛒 Cashier 收银系统</h1>
+
+    <div class="input-section">
+        <input type="text" id="itemName" placeholder="商品名">
+        <input type="number" id="itemPrice" placeholder="单价" min="0">
+        <input type="number" id="itemQuantity" placeholder="数量" min="1">
+        <button onclick="addItem()">添加</button>
+    </div>
+
+    <div class="cart-section">
+        <h2>🧾 购物清单</h2>
+        <ul id="cartList"></ul>
+        <p><strong>总价: ¥<span id="totalPrice">0</span></strong></p>
+        <button onclick="checkout()">结账</button>
+    </div>
+</div>
+
+<script src="/cashier/script.js"></script>
+</body>
+</html>

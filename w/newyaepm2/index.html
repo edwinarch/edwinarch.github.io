@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lotería PM2</title>
+    <link rel="stylesheet" href="../newyaepm2/style.css" />
+  <style>
+    #loading {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      color: white;
+      font-size: 24px;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+  <div id="loading">Cargando...</div>
+
+  <div class="container">
+    <div class="header">
+      <select id="yearSelector">
+        <option value="2025" selected>2025</option>
+        <option value="2024">2024</option>
+        <option value="2023">2023</option>
+      </select>
+      <h1>Números Ganadores</h1>
+      <h2>RESULTADOS Hoy</h2>
+      <p>Versión: 2.0</p>
+      <p>Formato de fecha: DD/MM/YYYY (Día / Mes / Año)</p>
+    </div>
+
+    <div class="filters">
+      <label for="monthSelector">Mes:</label>
+      <select id="monthSelector">
+        <option value="1">Enero (1)</option>
+        <option value="2">Febrero (2)</option>
+        <option value="3">Marzo (3)</option>
+        <option value="4">Abril (4)</option>
+        <option value="5">Mayo (5)</option>
+        <option value="6">Junio (6)</option>
+        <option value="7">Julio (7)</option>
+        <option value="8">Agosto (8)</option>
+        <option value="9">Septiembre (9)</option>
+        <option value="10">Octubre (10)</option>
+        <option value="11">Noviembre (11)</option>
+        <option value="12">Diciembre (12)</option>
+      </select>
+
+      <label for="daySelector">Día:</label>
+      <select id="daySelector"></select>
+
+      <button id="searchButton">Buscar</button>
+    </div>
+
+    <div class="results"></div>
+  </div>
+    <script src="../newyaepm2/lotterydata.js"></script>
+    <script src="../newyaepm2/main.js"></script>
+</body>
+</html>

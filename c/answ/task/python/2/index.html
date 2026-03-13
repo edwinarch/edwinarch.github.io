@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">  <!-- 语言改为西班牙语 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python - Else If</title>
+    <link rel="stylesheet" href="/answ/task/python/2/style.css">
+    <!-- 代码高亮库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+</head>
+<body>
+    <header>
+        <h1>Curso de Python - Else If</h1>
+    </header>
+
+    <main>
+        <section class="lesson">
+            <h2>Condicionales en Python</h2>
+            <p>En Python, podemos usar la estructura `if...elif...else` para ejecutar diferentes bloques de código según las condiciones.</p>
+            <pre><code class="language-python">x = 20
+if x > 30:
+    print("x es mayor que 30")
+elif x > 10:
+    print("x está entre 10 y 30")
+else:
+    print("x es menor o igual a 10")</code></pre>
+        </section>
+
+        <!-- Pregunta de opción múltiple -->
+        <section class="quiz">
+            <h2>Pregunta: ¿Cuál será el resultado del código?</h2>
+            <form id="quiz-form">
+                <label>
+                    <input type="radio" name="answer" value="x es mayor que 30"> A. x es mayor que 30
+                </label><br>
+                <label>
+                    <input type="radio" name="answer" value="x está entre 10 y 30"> B. x está entre 10 y 30
+                </label><br>
+                <label>
+                    <input type="radio" name="answer" value="x es menor o igual a 10"> C. x es menor o igual a 10
+                </label><br>
+                <button type="button" onclick="checkAnswer()">Enviar respuesta</button>
+            </form>
+            <p id="result"></p> <!-- Resultado -->
+        </section>
+    </main>
+
+    <script src="/answ/task/python/2/script.js"></script>
+    <!-- Biblioteca para resaltar código -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

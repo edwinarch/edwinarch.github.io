@@ -1,0 +1,132 @@
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* 头部样式 */
+.header {
+    text-align: center;
+    background-color: yellow;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    color: red;
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.header h2 {
+    color: orange;
+    margin: 5px 0;
+    font-size: 1.4rem;
+}
+
+.header p {
+    font-size: 0.9rem;
+}
+
+/* 筛选区域 */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    /* fat*/
+    margin-bottom: 28px;
+}
+
+.filters label {
+    font-size: 0.9rem;
+}
+
+/* 为*/
+.filters select {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    /*选择样式*/
+    border-radius: 17px;
+    width: 100px;
+}
+
+/*搜索按钮*/
+#searchButton {
+    padding: 9px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#searchButton:hover {
+    background-color: #0056b3;
+}
+
+/* 结果区域 */
+.results {
+    background-color: #ddf2f8;
+    border: 2px solid #14e7e7;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 3px solid #f03110a2;
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-header {
+    background-color: orange;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+    .filters {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .filters select {
+        width: 100%;
+    }
+
+    .header h1, .header h2 {
+        font-size: 1.4rem;
+    }
+
+    .header p {
+        font-size: 0.8rem;
+    }
+
+    #searchButton {
+        width: 100%;
+    }
+}

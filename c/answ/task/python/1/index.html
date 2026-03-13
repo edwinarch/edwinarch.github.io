@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python práctica</title>
+    <link rel="stylesheet" href="/answ/task/python/1/style.css">
+    <!-- 代码高亮库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+</head>
+<body>
+    <header>
+        <h1> a + b </h1>
+    </header>
+
+    <main>
+        <section class="lesson">
+            <h2>Variables y operaciones de Python</h2>
+            <p>En Python, puedes usar variables para almacenar datos y luego realizar operaciones sobre ellos:</p>
+            <pre><code class="language-python">a = 10
+b = 20
+print(a + b)</code></pre>
+        </section>
+
+        <!-- 选择题部分 -->
+        <section class="quiz">
+            <h2>Pregunta de opción múltiple: ¿Cuál es la salida del código?</h2>
+            <form id="quiz-form">
+                <label>
+                    <input type="radio" name="answer" value="10"> A. 10
+                </label><br>
+                <label>
+                    <input type="radio" name="answer" value="40"> B. 40
+                </label><br>
+                <label>
+                    <input type="radio" name="answer" value="200"> C. 200
+                </label><br>
+                <label>
+                    <input type="radio" name="answer" value="30"> D. 30
+                </label><br>
+                <button type="button" onclick="checkAnswer()">Enviar respuesta</button>
+            </form>
+            <p id="result"></p> <!-- 显示结果 -->
+        </section>
+    </main>
+
+    <script src="/answ/task/python/1/script.js"></script>
+    <!-- 代码高亮库 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

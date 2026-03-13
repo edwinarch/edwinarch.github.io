@@ -1,0 +1,238 @@
+/* 全局样式 */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+/* 
+顶部导航栏 
+*/
+.header {
+    background-color: #1584a0;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(20, 233, 13, 0.2);
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 0px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+/* 布局 */
+.layout {
+    display: flex;
+    flex: 1;
+}
+
+/* 左侧导航栏 */
+.sidebar {
+    width: 225px;
+    background-color: #1c8eaa;
+    color: #1ceba6;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+    padding: 11px;
+    box-shadow: 2px 0 5px rgba(56, 93, 255, 0.63);
+
+}
+
+.sidebar.hidden {
+    width: 0; /* 导航栏宽度设为 0 */
+    padding: 0; /* 去除内边距 */
+    transform: translateX(-250px);
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    margin-bottom: 10px;
+}
+
+.nav-title {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 8px;
+    display: block;
+    background-color: #444;
+    border-radius: 5px;
+}
+
+.nav-title:hover {
+    background-color: #555;
+}
+
+.submenu {
+    list-style: none;
+    padding-left: 15px;
+    margin: 5px 0 0;
+    display: none;
+}
+
+.submenu li a {
+    color: #ddd;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+}
+
+.submenu li a:hover {
+    text-decoration: underline;
+}
+
+
+/* 右侧内容区域 */
+.content {
+    flex: 1;
+    overflow: hidden;
+}
+
+.content.expanded {
+    margin-left: 0; /* 内容区域全屏展开 */
+}
+
+.content-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+/* 小屏幕样式 */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-250px);
+    }
+
+    .sidebar.visible {
+        transform: translateX(0);
+    }
+
+     .menu-button { 
+        font-size: 21px;
+    }
+    /*newui*/
+    .content {
+        flex: 1;
+        overflow: hidden;
+        margin-left: -255px; /* 向左移动 50px */
+    }
+    
+    .content-frame {
+        width: calc(90% + 50px); /* 补偿左移的宽度，避免内容被裁剪 */
+        height: 100%;
+        border: none;
+    }
+    
+        /*h1*/
+        h1 {
+            display: none;
+        }
+}
+
+
+
+@media (min-width: 768px) { 
+    /*h1*/
+    h1 {
+        position: relative; /* 相对定位 */
+        left: -30px; /* 向左移动 30px */
+        
+    }
+
+    /*h2*/
+    h2 {
+        display: none;
+    }
+}
+
+/* -------------------------------------------
+    不要动上面的代码
+    下面是你要修改的代码
+    你可以在这里添加自己的样式
+    动了有可能会出错哦或BUG,  不要动后果自负
+----------------------------------------------*/
+h2 {
+    font-size: 14px;
+}
+
+h3 {
+    font-size: 11px;
+    color: #e4fc13;
+}
+
+h4 {
+    
+    font-size: 15px;
+    color: #faf609;
+    padding: -4px 10px;
+}
+
+/*----------------------------------------------
+    添加，用语言的选项
+------------------------------------------------*/
+.selectlanguageBox {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	height: 30px;
+	background-color: rgba(0, 0, 0, 0.3);
+	transition: height 0.2s ease;
+	overflow: hidden;
+	font-family: ComicSans;
+	color: white;
+	padding: 2px 10px;
+	border-radius: 4px;
+	text-align: center;
+	user-select: none;
+}
+.selectlanguageBox:hover {
+	height: 90px;
+}
+
+.selectlanguageBox hr {
+	background-color: white;
+	border-top: 2px solid rgba(0, 0, 0, 0.1);
+	margin-top: 0;
+	margin-bottom: 0px;
+}
+.selectlanguageText {
+	margin-top: 4px;
+	height: 120px;
+	overflow: auto;
+	font-size: 0.85rem;
+}
+.selectlanguageText a {
+	color: #e4ebe9;
+	display: block;
+	font-family: ComicSans;
+	margin-bottom: 2px;
+	font-weight: bold;	
+	border-bottom: 2px solid white;
+	padding-bottom: 3px;
+	transition: transform 0.2s ease;
+	text-decoration: unset;
+}
+
+.databasesText a:hover {
+	transform: scale(0.95);
+}
